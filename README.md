@@ -24,9 +24,14 @@ ah yes a width of 45% that is floating left, and on a table it is a width of 60%
 
 Lets do a responsive 60 - 30 split div
 
-<code><div class="sixty inline-block va-t p-ninety-five p-block">I'm Sixty... on a desktop.</div>
+<code>
+<div class="sixty inline-block va-t p-ninety-five p-block">
+  <p>I'm Sixty... on a desktop.</p>
+</div>
+<code>
+
 <div class="thirty inline-block va-t p-ninety-five p-block">I'm Thirty... on a desktop.</div>
-</code>
+
 
 In that example I used inline-block instead of floats; Why you may ask? I just perfer to write my code that way, thats why. Oh an va-t stands for vertical-align: top; in case you are unaware how blocks perform.
 
