@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -36,9 +39,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 
 * { 
--moz-box-sizing: border-box;
+-moz-box-sizing: content-box;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
+}
+/* FIREFOX BOX SIZING FIX */
+@-moz-document url-prefix() {
+* { -moz-box-sizing: border-box; }
 }
 
 body {
@@ -91,10 +98,14 @@ body {
 .w-10 {width:100%;}
 /* display properties
 ********************/
+.border-box { box-sizing:border-box;-moz-box-sizing: border-box;}
+.content-box { box-sizing:content-box;-moz-box-sizing: content-box;}
 .block {display: block;}
 .inline-block {display: inline-block;}
 .inline {display: inline;}
 .va-t {vertical-align:top;}
+.va-m {vertical-align:middle;}
+.va-b {vertical-align:bottom;}
 .none {display:none;}
 .border-none {border:none;}
 .list-style-none {list-style:none;}
@@ -233,6 +244,30 @@ h1,h2,h3,h4,h5,h6, > small {font-size:65%;}
 .m-b5 {margin-bottom:5%;}
 .m-b10 {margin-bottom:10%;}
 
+/* typography
+**********/
+.f-08em {
+	font-size:.8em;
+}
+.f-1em {
+	font-size:1em;
+}
+.f-1-5em {
+	font-size:1.5em;
+}
+.f-2em {
+	font-size:2em;
+}
+.f-10 {
+	font-size:10px;
+}
+.f-15 {
+	font-size:15px;
+}
+.f-20 {
+	font-size:20px;
+}
+
 @media screen and (max-width: 768px) {
 .t-ten {width:10% !important;}
 .t-twenty {width:20% !important;}
@@ -265,13 +300,20 @@ h1,h2,h3,h4,h5,h6, > small {font-size:65%;}
 .t-w-95 {width:95%;}
 .t-w-10 {width:100%;}
 
+.t-h-auto {height:auto;}
+
 /* display properties
 ********************/
+.t-border-box { box-sizing:border-box;-moz-box-sizing: border-box;}
+.t-content-box { box-sizing:content-box;-moz-box-sizing: content-box;}
 .t-block {display: block;}
 .t-inline-block {display: inline-block;}
 .t-inline {display: inline;}
 .t-none {display:none;}
 .t-m-auto {margin-left:auto; margin-right:auto;}
+.t-va-t {vertical-align:top;}
+.t-va-m {vertical-align:middle;}
+.t-va-b {vertical-align:bottom;}
 
 /* text properties
 ********************/
@@ -406,11 +448,16 @@ h1,h2,h3,h4,h5,h6, > small {font-size:65%;}
 
 /* display properties
 ********************/
+.p-border-box { box-sizing:border-box;-moz-box-sizing: border-box;}
+.p-content-box { box-sizing:content-box;-moz-box-sizing: content-box;}
 .p-block {display: block;}
 .p-inline-block {display: inline-block;}
 .p-inline {display: inline;}
 .p-none {display:none;}
 .p-m-auto {margin-left:auto; margin-right:auto;}
+.p-va-t {vertical-align:top;}
+.p-va-m {vertical-align:middle;}
+.p-va-b {vertical-align:bottom;}
 
 /* text properties
 ********************/
@@ -500,4 +547,28 @@ h1,h2,h3,h4,h5,h6, > small {font-size:65%;}
 .p-left {float: left;}
 .p-right {float: right;}
 .p-float-none {float: none;}
+
+/* typography
+**********/
+.p-f-08em {
+	font-size:.8em;
 }
+.p-f-1em {
+	font-size:1em;
+}
+.p-f-1.5em {
+	font-size:1.5em;
+}
+.p-f-2em {
+	font-size:2em;
+}
+.p-f-10 {
+	font-size:10px;
+}
+.p-f-15 {
+	font-size:15px;
+}
+.p-f-20 {
+	font-size:20px;
+}
+} 
