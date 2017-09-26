@@ -46,9 +46,3 @@ Lets use that same example, but this time lets make the text "conditional"
     <p class="p-none">I'm Thirty... on a desktop.</p>
     <p class="none p-block">Now I am 95%!</p>
 </div>
-
-Just blow your mind? I apologize.
-
-
-
-
